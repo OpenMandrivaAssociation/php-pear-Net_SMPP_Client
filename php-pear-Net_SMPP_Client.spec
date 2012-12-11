@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	0.3.2
-Release:	%mkrel 9
+Release:	%mkrel 7
 Summary:	SMPP v3.4 client
 License:	PHP License
 Group:		Development/PHP
@@ -58,7 +58,7 @@ pear install --nodeps --soft --force --register-only \
 %if %mdkversion < 201000
 if [ "$1" -eq "0" ]; then
     pear uninstall --nodeps --ignore-errors --register-only \
-        %{upstream_name} >/dev/null || :
+        %{pear_name} >/dev/null || :
 fi
 %endif
 
@@ -67,3 +67,40 @@ fi
 %doc %{upstream_name}-%{version}/docs/*
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/packages/%{upstream_name}.xml
+
+
+%changelog
+* Fri May 27 2011 Oden Eriksson <oeriksson@mandriva.com> 0.3.2-7mdv2011.0
++ Revision: 679500
+- mass rebuild
+
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 0.3.2-6mdv2011.0
++ Revision: 613737
+- the mass rebuild of 2010.1 packages
+
+* Sun Nov 22 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.3.2-5mdv2010.1
++ Revision: 468719
+- spec cleanup
+- use pear installer
+- don't ship tests, even in documentation
+- own all directories
+- use rpm filetriggers starting from mandriva 2010.1
+
+* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 0.3.2-4mdv2010.0
++ Revision: 441493
+- rebuild
+
+* Thu Jan 01 2009 Oden Eriksson <oeriksson@mandriva.com> 0.3.2-3mdv2009.1
++ Revision: 322498
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 0.3.2-2mdv2009.0
++ Revision: 268961
+- rebuild early 2009.0 package (before pixel changes)
+
+* Fri Jun 06 2008 Funda Wang <fwang@mandriva.org> 0.3.2-1mdv2009.0
++ Revision: 216495
+- adopt to mandriva style
+- import php-pear-Net_SMPP_Client
+
+
