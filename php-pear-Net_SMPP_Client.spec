@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	0.3.2
-Release:	8
+Release:	9
 Summary:	SMPP v3.4 client
 License:	PHP License
 Group:		Development/PHP
