@@ -8,7 +8,7 @@ Release:	9
 Summary:	SMPP v3.4 client
 License:	PHP License
 Group:		Development/PHP
-URL:		http://pear.php.net/package/Net_SMPP_Client/
+URL:		https://pear.php.net/package/Net_SMPP_Client/
 Source0:	http://download.pear.php.net/package/%{upstream_name}-%{version}.tgz
 Requires(post): php-pear
 Requires(preun): php-pear
